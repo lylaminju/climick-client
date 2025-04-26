@@ -19,10 +19,10 @@
 - [Preview](#preview)
 - [Motivation](#motivation)
 - [Challenges](#challenges)
-  - [1. Expressing Joint Movements](#1-expressing-joint-movements)
+  - [1. Implementing Joint Movements](#1-implementing-joint-movements)
     - [How can the arms (legs) bend according to the movement of the hands (feet)?](#how-can-the-arms-legs-bend-according-to-the-movement-of-the-hands-feet)
     - [When extending the hands, can other body parts move naturally accordingly?](#when-extending-the-hands-can-other-body-parts-move-naturally-accordingly)
-  - [2. Implementing a Physics Engine Without External Libraries](#2-implementing-a-physics-engine-without-external-libraries)
+  - [2. Creating a Physics Engine Without External Libraries](#2-creating-a-physics-engine-without-external-libraries)
     - [How to represent gravity that constantly acts on objects?](#how-to-represent-gravity-that-constantly-acts-on-objects)
     - [Dividing the cases where gravity acts more strongly than the sum of other forces](#dividing-the-cases-where-gravity-acts-more-strongly-than-the-sum-of-other-forces)
   - [3. Improving UX](#3-improving-ux)
@@ -64,7 +64,7 @@ So I planned this game not just for fun, but to have something to learn from.
 
 # Challenges
 
-## 1. Expressing Joint Movements
+## 1. Implementing Joint Movements
 
 ### How can the arms (legs) bend according to the movement of the hands (feet)?
 
@@ -194,10 +194,10 @@ return moveBodyTo({
 
 <br>
 
-## 2. Implementing a Physics Engine Without External Libraries
+## 2. Creating a Physics Engine Without External Libraries
 
->  **Motivation for implementing without external libraries** <br>
-I thought I could implement it directly without a 3rd party library because as long as I can represent the body’s parts’ accelerated circular motion under gravity acceleration, it would suffice.
+>  **Motivation** <br>
+I thought I could implement it myself without relying on a third-party library, as long as I could accurately represent the accelerated circular motion of the body’s parts under gravity.
 
 ### How to represent gravity that constantly acts on objects?
 1. Create a gravity function that acts on all objects. ❌
